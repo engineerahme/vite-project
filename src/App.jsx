@@ -3,6 +3,7 @@ import { useReducer } from "react";
 import "./theme.css";
 
 import "./App.css";
+import { Link } from "react-router-dom";
 
 const initialData = { name: "Sara", age: 28, startCount: 0, theme: "light" };
 
@@ -30,6 +31,10 @@ function App() {
 
   return (
     <div className={` App ${allData.theme}`}>
+      <Link style={{ marginBottom: "30px" }} to="Page2 ">
+        Go To Page 2
+      </Link>
+
       <button
         onClick={() => {
           dispatch({
